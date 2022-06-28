@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>Ubuntu Gnome桌面美化 | yuanczx</title>
+<meta name="description" content="&lt;span id=&#34;jinrishici-sentence&#34; onclick=&#34;toast()&#34;&gt;温故知新
+&lt;script&gt;
+function toast(){alert(&#34;温故知新&#34;);}&lt;/script&gt;&lt;/span&gt;&lt;script src=&#34;https://sdk.jinrishici.com/v2/browser/jinrishici.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yuanczx.github.io/favicon.ico?v=1656417482990">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://yuanczx.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://yuanczx.github.io">
+        <img class="avatar" src="https://yuanczx.github.io/images/avatar.png?v=1656417482990" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://yuanczx.github.io">
+        <h1 class="site-title">yuanczx</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+        
+          <a href="/post/links" class="menu purple-link">
+            友链
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">Ubuntu Gnome桌面美化</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-12-19</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://yuanczx.github.io/tag/ubuntu/">
+                    Ubuntu
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://yuanczx.github.io/tag/mei-hua/">
+                    美化
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://yuanczx.github.io/tag/linux/">
+                    Linux
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <h2 id="1-安装-tweaks-gnome美化插件">1. 安装 Tweaks (Gnome美化插件)</h2>
+<p><code>sudo apt update&amp;&amp;sudo apt install gnome-tweaks chrome-gnome-shell</code><br>
+<img src="https://yuanczx.github.io/post-images/1639910398091.png" alt="Tweaks界面" loading="lazy"></p>
+<h2 id="2-安装tweaks插件">2. 安装Tweaks插件</h2>
+<ul>
+<li><a href="https://extensions.gnome.org/">下载地址</a></li>
+<li>安装 UserThemes<br>
+<img src="https://yuanczx.github.io/post-images/1639910652867.png" alt="UserThemes" loading="lazy"></li>
+</ul>
+<h2 id="3-选择喜欢的主题并安装">3. 选择喜欢的主题并安装</h2>
+<ul>
+<li><a href="https://www.gnome-look.org">GnomeLook</a></li>
+<li>选择喜欢的主题下载<br>
+<img src="https://yuanczx.github.io/post-images/1639910868196.png" alt="GnomeTheme" loading="lazy"></li>
+<li>安装主题<br>
+将文件解压并将文件夹移动至对应目录如下表
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>目录</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主题</td>
+<td>/usr/share/themes</td>
+</tr>
+<tr>
+<td>图标</td>
+<td>/usr/share/icons</td>
+</tr>
+<tr>
+<td>光标</td>
+<td>/usr/share/icons</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="4-使用主题">4.  使用主题</h2>
+<ul>
+<li>进入 Tweaks 选择外观Tab</li>
+<li>安装后需要切换一次主题才能显示新安装的主题</li>
+<li>最终效果图<br>
+<img src="https://yuanczx.github.io/post-images/1640495867504.png" alt="" loading="lazy"></li>
+</ul>
+<h2 id="5-个人使用插件">5. 个人使用插件</h2>
+<table>
+<thead>
+<tr>
+<th>插件</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://extensions.gnome.org/extension/6/applications-menu/">Applications Menu</a></td>
+<td>在顶栏显示APP列表</td>
+</tr>
+<tr>
+<td><a href="https://extensions.gnome.org/extension/1732/gtk-title-bar/">GTK Title Bar</a></td>
+<td>隐藏标题栏</td>
+</tr>
+<tr>
+<td><a href="https://extensions.gnome.org/extension/545/hide-top-bar/">Hide Top Bar</a></td>
+<td>隐藏顶栏</td>
+</tr>
+<tr>
+<td><a href="https://extensions.gnome.org/extension/1121/ibus-font-setting/">ibus font setting</a></td>
+<td>输入法设置</td>
+</tr>
+<tr>
+<td><a href="https://extensions.gnome.org/extension/19/user-themes/">User Themes</a></td>
+<td>主题</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-推荐主题">6. 推荐主题</h2>
+<p><a href="https://www.gnome-look.org/p/1357889/">Orchis gtk theme</a><br>
+<a href="https://www.gnome-look.org/p/1215613">GoogleDot Blue</a><br>
+<a href="https://www.gnome-look.org/p/1279924/">Tela-icon-theme</a></p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://yuanczx.github.io/post/xH3QXiski/">
+              <h3 class="post-title">
+                下一篇：Docker 常用命令及问题解决
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan"><span id="jinrishici-sentence" onclick="toast()">温故知新
+<script>
+function toast(){alert("温故知新");}</script></span><script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script></div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/yuanczx" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a class="powered" href="https://github.com/getgridea/gridea">Gridea</a> | <a class="rss" href="https://yuanczx.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

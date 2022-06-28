@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>智慧树脚本 | yuanczx</title>
+<meta name="description" content="&lt;span id=&#34;jinrishici-sentence&#34; onclick=&#34;toast()&#34;&gt;温故知新
+&lt;script&gt;
+function toast(){alert(&#34;温故知新&#34;);}&lt;/script&gt;&lt;/span&gt;&lt;script src=&#34;https://sdk.jinrishici.com/v2/browser/jinrishici.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yuanczx.github.io/favicon.ico?v=1656417482990">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://yuanczx.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://yuanczx.github.io">
+        <img class="avatar" src="https://yuanczx.github.io/images/avatar.png?v=1656417482990" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://yuanczx.github.io">
+        <h1 class="site-title">yuanczx</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+        
+          <a href="/post/links" class="menu purple-link">
+            友链
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">智慧树脚本</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-10-21</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://yuanczx.github.io/tag/javascript/">
+                    Javascript
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <pre><code class="language-javascript">//正则表达式：获取id
+var regx = /(?&lt;=fileId=)\d+/;
+//获取当前url
+var url = window.location.href
+//获取id
+var id = parseInt(url.match(regx));
+
+//循环判断
+var cirl = function() {
+	var eleId = 'file_'+id;
+	var ele = document.getElementById(eleId);
+    //如果当前视频已完成则跳转至下一个视频
+	if (ele.innerHTML.indexOf('icon-finish')!=-1) {
+		var index = id+1;
+		var baseUrl = url.replace(regx,index);
+		window.location.href=baseUrl;
+	}
+
+};
+setInterval(cirl,500);
+setTimeout(function(){
+    //开始播放视频
+    document.getElementById(&quot;playButton&quot;).click();
+    //1.5倍速播放
+    document.getElementsByClassName(&quot;speedTab15&quot;)[0].click();
+    //document.getElementsByClassName(&quot;line1bq&quot;)[0].click();
+    //静音
+    document.getElementsByClassName(&quot;volumeIcon&quot;)[0].click();
+},2000)
+
+</code></pre>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://yuanczx.github.io/post/Y1hrGCHpn/">
+              <h3 class="post-title">
+                下一篇：LaTeX 常用数学符号表示
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan"><span id="jinrishici-sentence" onclick="toast()">温故知新
+<script>
+function toast(){alert("温故知新");}</script></span><script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script></div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/yuanczx" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a class="powered" href="https://github.com/getgridea/gridea">Gridea</a> | <a class="rss" href="https://yuanczx.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

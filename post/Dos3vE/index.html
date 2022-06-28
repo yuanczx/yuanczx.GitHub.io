@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>【转载】DOS常用命令 | yuanczx</title>
+<meta name="description" content="&lt;span id=&#34;jinrishici-sentence&#34; onclick=&#34;toast()&#34;&gt;温故知新
+&lt;script&gt;
+function toast(){alert(&#34;温故知新&#34;);}&lt;/script&gt;&lt;/span&gt;&lt;script src=&#34;https://sdk.jinrishici.com/v2/browser/jinrishici.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yuanczx.github.io/favicon.ico?v=1656417482990">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://yuanczx.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://yuanczx.github.io">
+        <img class="avatar" src="https://yuanczx.github.io/images/avatar.png?v=1656417482990" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://yuanczx.github.io">
+        <h1 class="site-title">yuanczx</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+        
+          <a href="/post/links" class="menu purple-link">
+            友链
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">【转载】DOS常用命令</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-05-18</span>
+            
+          </div>
+          <div class="post-content">
+            <p>转载自<a href="https://blog.csdn.net/qq_37131111/article/details/82079083">CSDN</a></p>
+<!-- more -->
+<p>DOS命令学习</p>
+<p>一、DOS使用常识<br>
+DOS的概况<br>
+DOS（Disk Operating System）是一个使用得十分广泛的磁盘操作系统，就连眼下流行的Windows9x/ME系统都是以它为基础。</p>
+<p>常见的DOS有两种：IBM公司的PC-DOS和微软公司的MS-DOS，它们的功能、命令用途格式都相同，我们常用的是MS-DOS。</p>
+<p>二、DOS的内部命令<br>
+DOS的内部命令是进行操作的基础，完成了对它们的学习就跨进了DOS系统的大门。内部命令，是指在DOS启动之后，自动通过command.com文件导入内存的命令。在执行这些命令的时候，直接从内存进行调用………</p>
+<p>1） dir–显示指定路径上所有文件或目录的信息<br>
+它的格式为”dir [盘符：][路径][文件名] [参数]”，比如”DIR E:\FF.M3U”。</p>
+<p>2） md(mkdir)–建立目录<br>
+它的格式为”md [盘符][路径]”，例如”MD TEMP”。</p>
+<p>3） rd(rmdir)–删除目录<br>
+格式为”RD [盘符][路径]”。<br>
+注意：该命令只能删除空目录，并且不能删除当前目录。</p>
+<p>4） cd–进入指定目录<br>
+格式为” CD [路径]”，例如”CD HAPPY”。<br>
+注意：只能进入当前盘符中的目录。其中”CD\”为回到根目录，”CD..”为回到上一层目录。</p>
+<p>5） copy–拷贝文件<br>
+格式为”COPY [源目录或文件] [目的目录或文件]”，比如”COPY C:*.COM D:\”<br>
+注意：使用该命令进行文件拷贝时，目的目录一定要存在。</p>
+<p>6） del–删除文件<br>
+格式为”DEL [盘符][路径][文件名] [参数]”，比如”DEL C:\DATA*.BAK”。它有一个参数：”/P”，可以使用户在删除多个文件时对每个文件都显示删除询问</p>
+<p>7） ren(rename)–改名<br>
+格式为”REN [原名] [现名]”，7.0以后版本的DOS都支持对文件名和目录名的修改，而以前的DOS只能修改文件名。</p>
+<p>8） type–显示文本文件<br>
+格式为”TYPE [文件名]”，能对文本文件进行查看。</p>
+<ol start="9">
+<li>discopy–磁盘复制</li>
+</ol>
+<p>[功能] 复制出一个和原来磁盘内容一模一样的磁盘</p>
+<p>[格式] diskcopy　源驱动器名　目的驱动器名</p>
+<p>[说明] 它的主要用途就是用来备份。</p>
+<ol start="10">
+<li>deltree–删除目录树</li>
+</ol>
+<p>[格式] [C:][path]DELTREE [C1:][path1] [[C2:][path2] […]]</p>
+<p>[说明] 这个命令将整个指定目录树全部消灭，而不管它是否是只读、隐藏与否。</p>
+<ol start="11">
+<li>mem–查看你的计算机内存有多少，以及内存的使用情况。</li>
+</ol>
+<p>[格式] mem</p>
+<ol start="12">
+<li>chkdsk–检查你的磁盘的使用情况。</li>
+</ol>
+<p>[格式] chkdsk　磁盘名</p>
+<p>[说明] 例如要检查A盘使用情况，就输入chkdsk　A: ，检查c盘使用情况，就输入chkdsk　C: ，如果直接输入chkdsk，就检查当前磁盘的使用情况。</p>
+<ol start="13">
+<li>sys–传递系统文件命令。将DOS的两个隐含的系统IO.SYS和MSDOS.SYS传送到目标磁盘的特定位置上，并将COMMAND.COM文件复制过去。完成后，目标盘成为DOS的启动盘。</li>
+</ol>
+<p>[格式] [C:][path]SYS [C1:][path] d2:</p>
+<p>[说明] 由于这几个文件需要复制到特定位置上，所以用COPY命令完成的复制未必能够启动机器。能过SYS命令，DOS可以将目标盘已占据特定位置的文件移动，并将系统文件复制到相应位置上。参数C1:path用来指明系统文件所在目录。如不指明，则缺省为当前盘的当前目录。所以这个命令一般要在源盘的根目录进行。</p>
+<ol start="14">
+<li>pass–设定DOS寻找.COM、.EXE、.BAT文件的所在目录</li>
+</ol>
+<p>[格式] path=[[drive:]path[;…]]或path</p>
+<p>[说明] 只打path没有参数时，只显示环境变量内容。有参数时，重新设置path变量。在没有指定path环境变量时，用户发出的命令，DOS首先判断其是否为内部命令，再查找当前目录中是否有主文件名是该命令的可执行文件，如果均不是，则显示信息“Bad command or filename”。如果发出了指定路径的命令，则在指定径中依次查找，仍找不到则出现上述提示。</p>
+<ol start="15">
+<li>cls–清除显示器屏幕上的内容，使DOS提示符到屏幕左上角。</li>
+</ol>
+<p>[格式] cls</p>
+<ol start="16">
+<li>time–显示和设置DOS的系统时间</li>
+</ol>
+<p>[格式] time [hh[:mm[:ss[.cc]]]</p>
+<ol start="17">
+<li>date–显示和设置DOS的系统日期</li>
+</ol>
+<p>[格式] date [MM-DD-YY]</p>
+<ol start="18">
+<li>ver–显示正在运行的DOS系统版本号</li>
+</ol>
+<p>[格式] ver</p>
+<p>三、DOS的外部命令</p>
+<p>DOS的外部命令就是一些应用程序，能够使用户的操作更加方便和深入。这些外部命令都是以文件的形式存在，Windows系统的DOS外部命令保存在Windwos主目录下的”Command”目录中。下面这些是常用的一些DOS外部命令。</p>
+<p>1）FORMAT（Format.COM）–格式化命令<br>
+FORMAT命令可以完成对软盘和硬盘的格式化操作</p>
+<p>格式为”FORMAT [盘符] [参数]”，例如：”FORMAT A: /S”。</p>
+<p>它有两个常见的参数：</p>
+<p>/Q：进行快速格式化；<br>
+/S：完成格式化，并将系统引导文件拷贝到该磁盘。</p>
+<p>注意：该命令会清除目的磁盘上的所有数据，一定要小心使用。如果进行了普通的格式化，那磁盘上的数据还有可能恢复，但如果加上了”/Q”，那要恢复就比蹬天还难了。</p>
+<p>2） EDIT（Edit.COM）–编辑命令<br>
+其实它就是一个文本编辑软件，使用它可以在DOS下方便地对文本文件进行编辑，格式为”EDIT [文件名] [参数]”。</p>
+<p>3） SYS（Sys.COM）–系统引导文件传输命令<br>
+它能够将IO.SYS等几个文件传输到目的磁盘，使其可以引导、启动。</p>
+<p>格式为”SYS [盘符]”</p>
+<p>4） ATTRIB（Attrib.EXE）–文件属性设置命令<br>
+通过该命令，我们可以对文件进行属性的查看和更改。</p>
+<p>格式为”ATTRIB [路径][文件名] [参数]”，如果不加参数则为显示文件属性。</p>
+<p>它的参数有”+？”和”-？”两种，”？”代表属性代号，这些代号有：”H”隐藏；”S”系统；”R”只读，”+”表示赋予，”-“表示去除。</p>
+<p>5） XCOPY（Xcopy.EXE）–拷贝命令<br>
+该命令在”COPY”的基础上进行了加强，能够对多个子目录进行拷贝。它的参数比较多，但是最常用的是”/S”，它可以对一个目录下属的多个子目录进行拷贝，另外”/E”可以拷贝空目录。</p>
+<p>格式为”XCOPY [源路径][源目录/文件名] [目的目录/文件名] [参数]”。</p>
+<p>6） SCANDISK（Scandisk.EXE）–磁盘扫描程序<br>
+这个命令在实际的操作中有很大的用处，它能对磁盘进行扫描并修复，能够解决大部分的磁盘文件损坏问题。格式为”SCANDISK [盘符：] [参数]”下面是它的几个参数：</p>
+<p>/fragment ［驱动器名:\路径\文件名］：使用这个参数可以显示文件是否包含有间断的块，我们可以通过运行磁盘整理程序来解决这个问题；<br>
+/all：检查并修复所有的本地驱动器；<br>
+/autofix：自动修复错误，即在修复时不会出现提示；<br>
+/checkonly：仅仅检查磁盘，并不修复错误；<br>
+/custom：根据Scandisk.ini文件的内容来运行Scandisk，Scandisk.ini是一个文本文件，它包含了对Scandisk程序的设置，其中的［custom］块是在加上”/custom”参数后才执行的，用户可以根据自己的不同情况来进行不同的设置；<br>
+/nosave：在检查出有丢失簇后直接删除，并不转化为文件；<br>
+/nosummary：不显示检查概要，完成检查后将直接退出程序；<br>
+/surface：在完成初步检查后进行磁盘表面扫描；<br>
+/mono：以单色形式运行Scandisk。</p>
+<p>我们可以根据不同的情况来加上不同的参数。我们可以执行”scandisk /all /checkonly /nosave /nosummary”来完成对磁盘的检查并且自动退出，另外还可以编辑scandisk.ini文件中设置，再运行”scandisk /custom”。如果被损坏的文件比较多，我们可以使用”/autofix”来进行自动修复，不然会忙死你的。</p>
+<p>7） CHKDSK（Chkdsk.EXE）–磁盘检查命令<br>
+它会检查磁盘，并会显示一个磁盘状态报告。格式为”CHKDSK [盘符：] [参数]”，最常用的参数是”/F”，可以对文件错误进行修复。</p>
+<p>8） MOVE（Move.EXE）–文件移动命令<br>
+使用它可以对文件进行移动。</p>
+<p>格式为”MOVE [源文件] [目的路径]”。</p>
+<p>9） DELTREE（Deltree.EXE）–删除命令<br>
+DELTREE是DEL命令的超级加强版，它不仅可以删除文件，并且会将指定目录和其下的所有文件和子目录一并删掉。使用它，我们可以很方便的对目录进行彻底的删除。</p>
+<p>格式”DELTREE [文件/路径] [参数]”，</p>
+<p>参数有一个”/Y”，使用时系统会对每个文件进行询问，回答”Y”后才删除。</p>
+<ol start="10">
+<li>FDISK（Fdisk.EXE）–分区命令<br>
+更多的DOS命令</li>
+</ol>
+<p>命令<br>
+功能<br>
+命令<br>
+功能<br>
+ctty<br>
+改变控制设备<br>
+attrib<br>
+设置文件属性<br>
+emm386　　<br>
+扩展内存管理<br>
+defrag<br>
+磁盘碎片整理<br>
+fdisk<br>
+硬盘分区<br>
+doskey<br>
+　调用和建立DOS宏命令<br>
+lh/loadhigh<br>
+将程序装入高端内存<br>
+debug<br>
+程序调试命令<br>
+move<br>
+移动文件，改目录名<br>
+fc　<br>
+文件比较<br>
+prompt　<br>
+设置提示符<br>
+more<br>
+分屏显示<br>
+smartdrv<br>
+设置磁盘加速器<br>
+set<br>
+设置环境变量<br>
+subst<br>
+路径替换<br>
+setver<br>
+设置版本<br>
+xcopy 　　　<br>
+拷贝目录和文件<br>
+vol<br>
+　显示指定的磁盘卷标<br>
+大家如果感兴趣的话，不妨自己在DOS窗口中打打这些命令试试看</p>
+<p>四、FDISK使用介绍</p>
+<p>1、FDISK的使用介绍</p>
+<p>对硬盘进行分区、格式化，是每个硬盘都必须经过的步骤。<br>
+FDISK程序是DOS和Windows系统自带的分区软件，虽然其功能比不上有些软件，但用它分区是十分安全的。以下就是具体的操作步骤：</p>
+<p>1）进入DOS方式。在系统引导、出现”Starting Windows…..”的时候按下”F8”键，然后再选择”Command Prompt Only”即可进入DOS方式。</p>
+<p>2）键入”FDISK”后回车即可进入。</p>
+<p>3）这时软件会问你是否支持FAT32，回答”Y”就可以建立FAT32分区，回答”N”则会使用FAT16，决定以后按回车。</p>
+<p>4）出现FDISK的主菜单，要建立分区请选择”1”再回车。</p>
+<p>5）建立主分区（Primary Partition)，选择”1”后回车。</p>
+<p>6）这时系统会询问你是否使用最大的可用空间作为主分区，如果回答”Y”，那么软件就会将所有的磁盘空间划分成一个分区，回答”N”则可以划分多个分区，对于现在的硬盘来说，一般都比较大，如果划分成一个分区就不太好管理，因此可以选择输入”N”来分成多个分区。</p>
+<p>7）软件会提示你输入主分区的大小，输入后回车。</p>
+<p>8）完成后按ESC键回到主菜单。</p>
+<p>9）对于一个硬盘，必须设置一个活动分区后才可以引导操作系统，所以我们需要进入”2”项。</p>
+<p>10）这是会提示用户输入活动分区的号码，由于只有一个分区，就输入”1”。 完后会在状态栏中显示一个”A”，表示此分区为活动分区。</p>
+<p>11）一个硬盘只能有一个主分区，因此如果现在要划分剩下的硬盘空间就必须建立扩展分区，回到主菜单后选择”2”。</p>
+<p>12）程序会提示用户输入扩展分区的大小。</p>
+<p>13）扩展分区建立完成后，会显示主分区和扩展分区的相关资料，按ESC键。</p>
+<p>14）这时会提示没有逻辑盘的信息，你可以将整个扩展分区划分成一个逻辑盘，或者分成几个逻辑盘。现在可以输入第一个逻辑盘的大小，然后回车。</p>
+<p>15）这时会显示第一个逻辑盘的相关信息，并且要求你输入第2个逻辑盘的大小。</p>
+<p>16）完成后即可按ESC键退回到主菜单。</p>
+<p>17）这时在按ESC退出FDISK再重新启动，就可以对分区进行格式化了。</p>
+<p>如果是对已经分好区的硬盘进行重新分区，那么在主菜单时就必须先进入第三项将分区删除后才能进行。</p>
+<p>2、使用FDISK进行硬盘分区</p>
+<p>分区从实质上说就是对硬盘的一种格式化。当我们创建分区时，就已经设置好了硬盘的各项物理参数，指定了硬盘主引导记录(即MasterBootRecord，一般简称为MBR)和引导记录备份的存放位置。而对于文件系统以及其他操作系统管理硬盘所需要的信息则是通过之后的高级格式化，即Format命令来实现。用一个形象的比喻，分区就好比在一张白纸上画一个大方框。而格式化好比在方框里打上格子。安装各种软件就好比在格子里写上字。可以看得出来，分区和格式化就相当于为安装软件打基础，实际上它们为电脑在硬盘上存储数据起到标记定位的作用。进行硬盘分区，我们最常用的软件是FDISK.com。下面，我们就FDISK的一些功能和使用做一番比较详尽地介绍：</p>
+<p>我们以Win 95为例（Win 98和95大致上基本一致），用启动盘启动计算机，在A盘根目录下输入”Format”；屏幕上出现信息问你是否要启用FAT32支持，回答”Y”会建立FAT32分区，回答”N”则会使用FAT16,决定以后按Enter键。大家要记住一点，早期的WIN95及DOS并不能识别FAT32结构。如果你想要安装此类系统的话，还是选择FAT16为好。但选择FAT16后，每个分区不能大于2GB。在这里，我们选择FAT16。</p>
+<p>这时候，屏幕上将会显示以下4个选项</p>
+<ol>
+<li>建立DOS分区或逻辑分区</li>
+<li>设置活动分区</li>
+<li>删除分区或逻辑分区</li>
+<li>显示分区信息</li>
+<li>如果你安装有不止一块硬盘，系统还会出现有第5项（Change current fixed disk drive）。</li>
+</ol>
+<p>建立主分区<br>
+这里，缺省的选项是”1”。如果你的硬盘还没有建立过分区的话，直接按ENTER键即可。然后，在对话框中选择”建立主分区（Primary Partition）”，选择”1”再按下Enter键。这时，系统会询问你是否使用最大的可用空间作为主分区，缺省的回答是”Y”，你只要直接按下Enter键即可。当然，当程序问你是否要使用最大的可用空间作为主分区时，你也可以回答”N”然后按Enter键。这时，系统会要求你输入主分区的大小，输入以后按Enter键。这时，系统将会自动为主分区分配逻辑盘符”C”。然后屏幕将提示主分区已建立并显示主分区容量和所占硬盘全部容量的比例，此后按”Esc”返回FDISK主菜单。<br>
+建立扩展分区<br>
+在FDISK主菜单中继续选择”1”进入 “建立分区菜单” 后再选择”2”建立扩展分区，屏幕将提示当前硬盘可建为扩展分区的全部容量。此时我们如果不需要为其它操作系统（如NT、LINUX等）预留分区，那么建议使用系统给出的全部硬盘空间，此时可以直接回车建立扩展分区，然后屏幕将显示已经建立的扩展分区容量。</p>
+<p>设置逻辑盘数量和容量<br>
+扩展分区建立后，系统提示用户还没有建立逻辑驱动器，此时按”Esc”键开始设置逻辑盘，提示用户可以建为逻辑盘的全部硬盘空间，用户可以根据硬盘容量和自己的需要来设定逻辑盘数量和各逻辑盘容量。设置完成后，此时屏幕将会显示用户所建立的逻辑盘数量和容量，然后返回FDISK主菜单。</p>
+<p>激活硬盘主分区<br>
+在硬盘上同时建有主分区和扩展分区时，必须进行主分区激活，否则以后硬盘无法引导系统。在FDISK主菜单上选择”2”（Set active partition），此时屏幕将显示主硬盘上所有分区供用户进行选择，我们的主盘上只有主分区”1”和扩展分区”2”，当然我们选择主分区”1”进行激活，然后退回FDISK主菜单。</p>
+<p>一切结束以后，退出FDISK程序。继续按”Esc”键退出至屏幕提示用户必须重新启动系统，必须重新启动系统，然后才能继续对所建立的所有逻辑盘进行格式化（Format）操作。</p>
+<p>注意事项：在建立分区时，以下几点是值得您注意：</p>
+<p>1.主分区和逻辑分区<br>
+主分区的特性是在任何时刻只能有一个是活动的，当一个主分区被激活以后，同一硬盘上的其他主分区就不能再被访问。所以一个主分区中的操作系统不能再访问同一物理硬盘上其他主分区上的文件。而逻辑分区并不属于某个操作系统，只要它的文件系统与启动的操作系统兼容，则该操作系统就能访问它。（如图13所示）</p>
+<p>主分区和逻辑分区的一个重要区别是：每个逻辑分区分配唯一的驱动器名（盘符），而在同一硬盘上的所有主分区共享同一个驱动器名，因为某一时刻只能有一个主分区是活动的。这就意味着某一时刻只能用共享驱动器名访问活动的那个主分区。系统支持多达24个逻辑分区，这样，可能有许多人都会有这样一个错误的认识，那就是在对硬盘进行分区时最好多创建几个逻辑分区，这样可以避免出现问题的分区影响到保存在其他分区中的数据。但是事实往往并非如此，一个被损坏的分区往往会导致整个硬盘无法正常使用。我们已经在前面提到过主分区和扩展分区的信息都是被保存在MBR中，如果由于某种原因使MBR受到破坏，硬盘主分区将无法使用，进而使包含操作系统的启动盘也无法使用。</p>
+<p>是也许有人会认为逻辑分区的信息并不保存在MBR中，因此逻辑分区并不会受到任何影响。其实我们忽略了这样一个事实，那就是虽然逻辑分区的信息保存在扩展分区内，但是扩展分区的信息却是被保存在MBR中。这样，通过相互之间的作用，使逻辑分区最终也不能免受影响。不过一般情况下，一个分区受到损坏而其他分区仍然可以正常工作。例如，如果一个逻辑分区出现问题，很多时候其他的逻辑分区以及主分区和扩展分区都不会受到任何影响。但是话又说回来，出现问题的分区往往就是那些使用最频繁的分区，也就是MBR。</p>
+<p>2.驱动器名的分配<br>
+　　启动系统时，活动分区上的操作系统将执行一个称为驱动器映像的过程，它给主分区和逻辑分区分配驱动器名。所有的主分区首先被映像，而逻辑分区用后续的字母指定。一般来说，主分区将被定义为C，然后，系统会根据逻辑分区的多少依次给出D，E。。。。直到Z。当然，如果你有不两块硬盘的话，情况又会发生一些变化。我们举例说明，我们将每块硬盘都分为两个区，第一个硬盘的第一分区为主分区（盘符C），则第二个硬盘的第一分区为D，第一个硬盘的第二分区为E，第二个硬盘的第二分区为F。</p>
+<p>3.容量的分配<br>
+要分割成几个分区以及第一个分区所占有的容量，取决于使用者自己的想法，有些人喜欢将整个硬盘规划单一分区，有些人则认为分割成几个分区比较利于管理。例如，分割成两个分区，一个储存操作系统文件，另一个储存应用程序文件;或者一个储存操作系统和应用程序档案，另一个储存个人和备份的资料。至于分区所使用的文件系统，则取决于你要安装的操作系统。一般来说，主分区由于经常会进行数据的交换，因此容量不宜太小。其他的分区的大小分配则完全取决于个人喜好了。</p>
+<p>分区建立完了，接下去，我们应该查看一下具体的分区内容，做到心中有数。在FDISK主界面上，按”4”，回车。示A区显示了当前的分区情况，B区显示了硬盘的总容量，C区则进一步询问你是否要显示详细的逻辑分区情况。</p>
+<p>我们一部分一部分的来分析。在分区信息中：<br>
+①第一行是当前的硬盘号，因为只有一个硬盘，所以硬盘号为1。下面几行是分区信息。<br>
+②第一栏是当前分区，有1，2两部分，分别表示基本分区和扩展分区。<br>
+③第二栏是状态。A表示是活动分区。<br>
+④第三栏是分区类型，C为PRI DOS，即基本分区，下面这个是EXT DOS 即扩展分区。<br>
+⑤第四栏是硬盘卷标，它就好像我们给每个分区起的名字。<br>
+⑥第五栏是分区的大小，用多少兆字节(Mbytes)来表示。<br>
+⑦第六栏是系统文件分配表类型，显示FAT16。<br>
+⑧最后一栏是基本和扩展分区占总容量的比例。</p>
+<p>接下来我们再来看B区中的硬盘的容量， “硬盘的总容量为4126M”，即通常我们所说的4.3G的硬盘。</p>
+<p>这时候，系统会询问是否查看扩展DOS分区的信息，选”Y”则进入下一项。</p>
+<p>因为只有一个扩展分区，所以只有D、E盘的信息显示出来，虽然现在扩展分区分成了两个逻辑分区，但我们只能将逻辑分区叫做D、E盘，而不能称这个扩展分区为D、E盘。这里显示按ESC键继续。</p>
+<p>至此，分区的建立算是完成了。如果你对现行的分区不满意，你可以将分区删除后重新来。在建立分区时，我们遵循的步骤是： 建立基本分区-&gt; 建立扩展分区à 分成一个或几个逻辑分区；而我们在删除分区时则需要遵循以下原则：删除逻辑分区-&gt; 删除扩展分区-&gt; 删除基本分区</p>
+<p>分区的删除<br>
+删除逻辑分区，进入FDISK主界面。选择3，回车。选择了删除分区选择后，又出现下一级子菜单，包括如下内容：<br>
+1、删除主DOS分区。<br>
+2、删除扩展DOS分区。<br>
+3、删除扩展分区中的逻辑分区。<br>
+4、删除非DOS分区。</p>
+<p>关于删除分区的顺序，我们在上文中已经提到过，这里就不再重复了。需要补充的是，如果你的硬盘上有非DOS的分区，则应先将它删除，再删除逻辑分区。这里，我们直接从删除逻辑分区开始。选择”3”按下回车。下面就开始删除了！系统会用一个不断闪动的”WARNING!”提出警告，同时提示你输入要删除的逻辑分区号。输入E，再回车。</p>
+<p>这时候，系统提示输入E分区的卷标号，按屏幕上方的显示输入卷标。 　<br>
+如果没有，就直接回车跳过。系统会再提示确认，输入Y回车，E分区就被删除了。　　同样我们删除D分区，接着系统提示扩展分区中所有逻辑区均被删除。</p>
+<p>删除完了逻辑分区，我们再回到主界面，删除完逻辑分区后就要删除扩展分区了，这时还要选择3；这时进入删除界面。然后选2，”删除扩展DOS分区”。</p>
+<p>按提示输入”Y”，回车。扩展分区就被删除了。<br>
+删除完扩展分区后就要删除基本DOS分区了，按ESC返回。选第1项”删除基本DOS分区”。</p>
+<p>与其他分区的操作步骤一样，还要输入卷标、输入”Y”确认后回车，基本分区就被删除了。到这里，删除分区的工作就完成了。</p>
+<p>删除完成后，我们再次查看分区的情况，屏幕会显示当前硬盘还没有分区 。</p>
+<p>现在，硬盘又恢复到初始的状态下了。如果你对上次的硬盘分区不满意，现在又可以重新开始了。</p>
+<p>五、DOS解决问题实战</p>
+<p>看了前面的文章，相信大家对DOS的基础操作以有了一个较深的印象了吧。但光掌握以上的这些内容是远远不够的，解决电脑问题，最主要的还是能够将学到的死知识转化为自己可以熟练使用的兵器。当然，这也不是一朝一夕就可以达到的，同时也要靠经验的积累。下面就请大家随我一道来看几个实例，从中找出解决问题的关键和主要的思路。</p>
+<p>故障事例：<br>
+某电脑在使用时突然停电，来电后开启电脑，但Windows系统无法正常启动，死机频繁。</p>
+<p>故障分析：<br>
+从这个原因，我们可以大致推断：停电造成电脑非法关机而损伤磁盘文件，从而导致Windows系统受到损坏，无法正常运行。</p>
+<p>大致操作：<br>
+从解决文件损坏这个角度出发，需要修复损坏的文件，如果损坏严重，也可以考虑重装Windows。</p>
+<p>具体操作：<br>
+1、进入DOS。由于Windows受损，只有在DOS下进行操作。在系统引导、出现”Starting Windows…..”的时候按下”F8”键，然后再选择”Command Prompt Only”即可进入DOS方式。为了使修复速度更快，我们可以运行Windows目录下的”SMARTDRV.EXE”程序，这是一个加速磁盘读取速度的缓存程序。</p>
+<p>2、运行SCANDISK程序，必要时可以加上”/autofix”参数，这样在第一次选择后就可让程序自动修复。</p>
+<p>3、运行CHKDSK程序，查看是否还存在着问题，并可以使用”/F”进行修复。</p>
+<p>4、运行Windows，看系统是否恢复正常。如果在启动时提示注册表出错，可以重新进入DOS，在Windows目录下运行”SCANREG /RESTORE”，然后在列表中选择一个好的注册表文件就行了。</p>
+<p>5、如果文件系统受损严重，就需要重新安装Windows。</p>
+<p>如果无法正常进入Windows，那需要重新安装Windows的任务又只得在DOS下进行了。对于广大初学者，在DOS下安装Windows还有一定的困难，下面我就具体讲解一下在DOS下的安装。这里的安装使用光盘启动，若使用软盘启动其操作大致相同。</p>
+<p>1、在开机进行自检时按下”DEL”键从而进入BIOS设置，在”BIOS FEATURES SETUP”的”Boot Sequence”将”CDROM”一项设置在最前面；按”ESC”键退到主画面，按”F10”键，并输入”Y”，即可存盘退出。</p>
+<p>2、在开机前将系统启动盘放入光驱。</p>
+<p>3、在启动后的启动菜单中选择”启动并使用光驱（With CDROM）”，大家也可以选择启动后自动运行Windows98的安装程序，但那样并不和我意，安装过程将十分漫长，所以在安装前我们需要运行”SMARTDRV.EXE”。</p>
+<p>4、进入DOS后就转到光驱盘符，使用”DIR”命令查看目录，然后进入Windows的安装目录（目录名大都可以见名知意，一般为”Win98”、”Win”、”Windows”等）。</p>
+<p>5、运行”SMARTDRV.EXE”。</p>
+<p>6、运行”SETUP.EXE”，回车后会进入磁盘扫描，完成后即可进入安装，其操作就和在Windows中安装一样了。</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://yuanczx.github.io/post/qpI31Me/">
+              <h3 class="post-title">
+                下一篇：【转载】关于Android9.0后无法请求Http协议
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan"><span id="jinrishici-sentence" onclick="toast()">温故知新
+<script>
+function toast(){alert("温故知新");}</script></span><script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script></div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/yuanczx" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a class="powered" href="https://github.com/getgridea/gridea">Gridea</a> | <a class="rss" href="https://yuanczx.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

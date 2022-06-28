@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://yuanczx.github.io</id>
+    <title>yuanczx</title>
+    <updated>2022-06-28T11:58:07.592Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://yuanczx.github.io"/>
+    <link rel="self" href="https://yuanczx.github.io/atom.xml"/>
+    <subtitle>&lt;span id=&quot;jinrishici-sentence&quot; onclick=&quot;toast()&quot;&gt;温故知新
+&lt;script&gt;
+function toast(){alert(&quot;温故知新&quot;);}&lt;/script&gt;&lt;/span&gt;&lt;script src=&quot;https://sdk.jinrishici.com/v2/browser/jinrishici.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</subtitle>
+    <logo>https://yuanczx.github.io/images/avatar.png</logo>
+    <icon>https://yuanczx.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, yuanczx</rights>
+    <entry>
+        <title type="html"><![CDATA[傅里叶变换（Fourier Transform）性质]]></title>
+        <id>https://yuanczx.github.io/post/pBFUZa8M7/</id>
+        <link href="https://yuanczx.github.io/post/pBFUZa8M7/">
+        </link>
+        <updated>2022-06-28T11:38:37.000Z</updated>
+        <content type="html"><![CDATA[<p>f(t)-&gt;F(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ω</mi></mrow><annotation encoding="application/x-tex">\omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">ω</span></span></span></span>)</p>
+<table>
+<thead>
+<tr>
+<th>时域信号</th>
+<th>频域信号</th>
+<th>补充说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><msub><mi>f</mi><mn>1</mn></msub><mo>(</mo><mi>t</mi><mo>)</mo><mo>+</mo><mi>b</mi><msub><mi>f</mi><mn>2</mn></msub><mo>(</mo><mi>t</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">af_1(t)+bf_2(t)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">b</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mclose">)</span></span></span></span></td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><msub><mi>F</mi><mn>1</mn></msub><mo>(</mo><mi>j</mi><mi>ω</mi><mo>)</mo><mo>+</mo><mi>b</mi><msub><mi>F</mi><mn>2</mn></msub><mo>(</mo><mi>j</mi><mi>ω</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">aF_1(j\omega)+bF_2(j\omega)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault" style="margin-right:0.03588em;">ω</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">b</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault" style="margin-right:0.03588em;">ω</span><span class="mclose">)</span></span></span></span></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>f</mi><mo>∗</mo></msup><mo>(</mo><mi>t</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">f^*(t)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.688696em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mclose">)</span></span></span></span></td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>F</mi><mo>∗</mo></msup><mo>(</mo><mo>−</mo><mi>j</mi><mi>ω</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">F^*(-j\omega)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.688696em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">−</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault" style="margin-right:0.03588em;">ω</span><span class="mclose">)</span></span></span></span></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>t</mi><mo>±</mo><msub><mi>t</mi><mn>0</mn></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">f(t\pm t_0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">±</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mo>(</mo><mi>j</mi><mi>ω</mi><mo>)</mo><msup><mi>e</mi><mrow><mo>±</mo><mi>j</mi><mi>ω</mi><msub><mi>t</mi><mn>0</mn></msub></mrow></msup></mrow><annotation encoding="application/x-tex">F(j\omega)e^{\pm j\omega t_0}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0746639999999998em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault" style="margin-right:0.03588em;">ω</span><span class="mclose">)</span><span class="mord"><span class="mord mathdefault">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.824664em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">±</span><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span><span class="mord mathdefault mtight" style="margin-right:0.03588em;">ω</span><span class="mord mtight"><span class="mord mathdefault mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>t</mi><mo>)</mo><msup><mi>e</mi><mrow><mo>±</mo><mi>j</mi><msub><mi>ω</mi><mn>0</mn></msub><mi>t</mi></mrow></msup></mrow><annotation encoding="application/x-tex">f(t)e^{\pm j \omega_0 t}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0746639999999998em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mclose">)</span><span class="mord"><span class="mord mathdefault">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.824664em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">±</span><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.03588em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mord mathdefault mtight">t</span></span></span></span></span></span></span></span></span></span></span></span></td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mo>(</mo><mi>j</mi><mi>ω</mi><mo>∓</mo><msub><mi>ω</mi><mn>0</mn></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">F(j\omega \mp \omega_0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault" style="margin-right:0.03588em;">ω</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∓</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>a</mi><mi>t</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">f(at)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mclose">)</span></span></span></span></td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mn>1</mn><mrow><mo>∣</mo><mi>a</mi><mo>∣</mo></mrow></mfrac><mi>F</mi><mo>(</mo><mfrac><mrow><mi>j</mi><mi>ω</mi></mrow><mi>a</mi></mfrac><mo>)</mo></mrow><annotation encoding="application/x-tex">\frac{1}{\lvert a \rvert}F(\frac{j\omega}{a})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.427772em;vertical-align:-0.52em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">∣</span><span class="mord mathdefault mtight">a</span><span class="mclose mtight">∣</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.52em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.907772em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">a</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.446108em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span><span class="mord mathdefault mtight" style="margin-right:0.03588em;">ω</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span></span></span></span></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mo>(</mo><mi>t</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">F(t)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mclose">)</span></span></span></span></td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mi>π</mi><mi>f</mi><mo>(</mo><mo>−</mo><mi>j</mi><mi>ω</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">2\pi f(-j\omega)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mord mathdefault" style="margin-right:0.03588em;">π</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord">−</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault" style="margin-right:0.03588em;">ω</span><span class="mclose">)</span></span></span></span></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><msup><mi>d</mi><mi>n</mi></msup><mi>f</mi><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mrow><mi>d</mi><msup><mi>t</mi><mi>n</mi></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{d^nf(t)}{dt^n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.355em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">d</span><span class="mord mtight"><span class="mord mathdefault mtight">t</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5935428571428571em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight">d</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7385428571428572em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span><span class="mord mathdefault mtight" style="margin-right:0.10764em;">f</span><span class="mopen mtight">(</span><span class="mord mathdefault mtight">t</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>j</mi><mi>ω</mi><msup><mo>)</mo><mi>n</mi></msup><mi>F</mi><mo>(</mo><mi>j</mi><mi>ω</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(j \omega)^nF(j\omega)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault" style="margin-right:0.03588em;">ω</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault" style="margin-right:0.03588em;">ω</span><span class="mclose">)</span></span></span></span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Neovim 的简单配置]]></title>
+        <id>https://yuanczx.github.io/post/RU-cvZ6T0/</id>
+        <link href="https://yuanczx.github.io/post/RU-cvZ6T0/">
+        </link>
+        <updated>2022-05-05T13:39:11.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="提示">提示</h2>
+<ul>
+<li>Neovim 目录：<code>~\AppData\Local\nvim\</code>以及<code>~\AppData\Lcoal\nvim-data</code></li>
+<li>Neovim 提倡我们使用lua编写脚本</li>
+</ul>
+<h2 id="安装neovim">安装Neovim</h2>
+<ul>
+<li><a href="https://neovim.io/">Neovim官网</a></li>
+<li>点击 InstallNow</li>
+<li>根据提示下载安装 Windows 可以选择使用命令 <code>winget install Neovim.Neovim</code> 进行安装</li>
+</ul>
+<h2 id="安装插件管理工具">安装插件管理工具</h2>
+<p>这里选用插件管理工具<a href="https://github.com/wbthomason/packer.nvim#quickstart">packer.nvim</a></p>
+<ul>
+<li>
+<p>在Windows使用以下命令</p>
+<pre><code>git clone https://github.com/wbthomason/packer.nvim &quot;$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim&quot;
+</code></pre>
+</li>
+<li>
+<p>在<code>~\AppData\Local\nvim\lua\</code>新建<code>plugins.lua</code>内容如下：</p>
+<pre><code class="language-lua">return require('packer').startup(function()
+-- Packer can manage itself
+use 'wbthomason/packer.nvim'
+end)
+</code></pre>
+</li>
+<li>
+<p>在<code>~\AppData\Local\nvim\</code>新建<code>init.lua</code>内容如下：</p>
+<pre><code class="language-lua">require('plugins')
+</code></pre>
+</li>
+<li>
+<p>常用命令：</p>
+</li>
+<li>
+<p>:PackerInstall  安装插件</p>
+</li>
+<li>
+<p>:PackerUpdate 更新插件</p>
+</li>
+<li>
+<p>:PackerSync 同步插件</p>
+</li>
+</ul>
+<h2 id="安装插件代码补全插件cocnvim">安装插件（代码补全插件<code>coc.nvim</code>）</h2>
+<h3 id="注意本步骤需要使用-yarn">注意本步骤需要使用 <code>yarn</code></h3>
+<ul>
+<li>GitHub 地址<a href="https://github.com/neoclide/coc.nvim">coc.nvim</a></li>
+<li>编辑<code>plugins.lua</code><br>
+加入<code>use 'neoclide/coc.nvim'</code><br>
+执行命令<code>:PackerInstall</code></li>
+<li>进入目录<code>~\AppData\Local\nvim-data\site\pack\packer\start\coc.nvim</code><br>
+执行命令<code>yarn install&amp;&amp;yarn build</code></li>
+<li>安装 <code>coc-pyright</code>(Python代码提示扩展)
+<ul>
+<li>CocInstall coc-pyright<br>
+<img src="https://yuanczx.github.io/post-images/1651759928408.png" alt="" loading="lazy"></li>
+</ul>
+</li>
+<li>至此安装完成</li>
+</ul>
+<h2 id="最终效果">最终效果</h2>
+<figure data-type="image" tabindex="1"><img src="https://yuanczx.github.io/post-images/1651759744392.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[拉普拉斯变换(Laplace Transform)主要性质]]></title>
+        <id>https://yuanczx.github.io/post/K7MiNks6Y/</id>
+        <link href="https://yuanczx.github.io/post/K7MiNks6Y/">
+        </link>
+        <updated>2022-01-10T12:54:13.000Z</updated>
+        <content type="html"><![CDATA[<p><em>注意: 本文中 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>[</mo><mi>f</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>]</mo><mo>=</mo><mi>F</mi><mo>(</mo><mi>s</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">L[f(t)]=F(s)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">L</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mclose">)</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault">s</span><span class="mclose">)</span></span></span></span></em></p>
+<ul>
+<li>
+<h2 id="位移性质">位移性质</h2>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>[</mo><msup><mi>e</mi><mrow><mi>a</mi><mi>t</mi></mrow></msup><mi>f</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>]</mo><mo>=</mo><mi>F</mi><mo>(</mo><mi>s</mi><mo>−</mo><mi>a</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">L[e^{at}f(t)]=F(s-a)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.043556em;vertical-align:-0.25em;"></span><span class="mord mathdefault">L</span><span class="mopen">[</span><span class="mord"><span class="mord mathdefault">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7935559999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">a</span><span class="mord mathdefault mtight">t</span></span></span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mclose">)</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mclose">)</span></span></span></span></li>
+<li>
+<h2 id="微分性质">微分性质</h2>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>[</mo><msup><mi>f</mi><mo mathvariant="normal">′</mo></msup><mo>(</mo><mi>t</mi><mo>)</mo><mo>]</mo><mo>=</mo><mi>s</mi><mi>F</mi><mo>(</mo><mi>s</mi><mo>)</mo><mo>−</mo><mi>f</mi><mo>(</mo><mn>0</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">L[f&#x27;(t)]=sF(s)-f(0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mord mathdefault">L</span><span class="mopen">[</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mclose">)</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault">s</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord">0</span><span class="mclose">)</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>[</mo><msup><mi>f</mi><mi>n</mi></msup><mo>(</mo><mi>t</mi><mo>)</mo><mo>]</mo><mo>=</mo><msup><mi>s</mi><mi>n</mi></msup><mi>F</mi><mo>(</mo><mi>s</mi><mo>)</mo><mo>−</mo><msup><mi>s</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msup><mi>f</mi><mo>(</mo><mn>0</mn><mo>)</mo><mo>−</mo><msup><mi>s</mi><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow></msup><msup><mi>f</mi><mo mathvariant="normal">′</mo></msup><mo>(</mo><mn>0</mn><mo>)</mo><mo>−</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>−</mo><msup><mi>s</mi><mn>0</mn></msup><msup><mi>f</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>(</mo><mn>0</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">L[f^n(t)]=s^nF(s)-s^{n-1}f(0)-s^{n-2}f&#x27;(0)-...-s^0f^{n-1}(0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">L</span><span class="mopen">[</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mclose">)</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault">s</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord">0</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">0</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">0</span><span class="mclose">)</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>[</mo><mi>t</mi><mi>f</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>]</mo><mo>=</mo><mo>−</mo><msup><mi>F</mi><mo mathvariant="normal">′</mo></msup><mo>(</mo><mi>s</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">L[tf(t)]=-F&#x27;(s)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">L</span><span class="mopen">[</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mclose">)</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mord">−</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">s</span><span class="mclose">)</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>[</mo><msup><mi>t</mi><mi>n</mi></msup><mi>f</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>]</mo><mo>=</mo><mo>(</mo><mo>−</mo><mn>1</mn><msup><mo>)</mo><mi>n</mi></msup><msup><mi>F</mi><mi>n</mi></msup><mo>(</mo><mi>s</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">L[t^nf(t)]=(-1)^nF^n(s)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">L</span><span class="mopen">[</span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mclose">)</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">−</span><span class="mord">1</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">s</span><span class="mclose">)</span></span></span></span></li>
+<li>
+<h2 id="积分性质">积分性质</h2>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>[</mo><msubsup><mo>∫</mo><mn>0</mn><mi>t</mi></msubsup><mi>f</mi><mo>(</mo><mi>t</mi><mo>)</mo><mi>d</mi><mi>t</mi><mo>]</mo><mo>=</mo><mfrac><mn>1</mn><mi>s</mi></mfrac><mi>F</mi><mo>(</mo><mi>s</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">L[\int_0^t f(t)dt]=\frac{1}{s}F(s)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.344276em;vertical-align:-0.35582em;"></span><span class="mord mathdefault">L</span><span class="mopen">[</span><span class="mop"><span class="mop op-symbol small-op" style="margin-right:0.19445em;position:relative;top:-0.0005599999999999772em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.988456em;"><span style="top:-2.34418em;margin-left:-0.19445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span><span style="top:-3.2579000000000002em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.35582em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mclose">)</span><span class="mord mathdefault">d</span><span class="mord mathdefault">t</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">s</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault">s</span><span class="mclose">)</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>[</mo><msubsup><mo>∫</mo><mn>0</mn><mi>t</mi></msubsup><msubsup><mo>∫</mo><mn>0</mn><mi>t</mi></msubsup><mi>f</mi><mo>(</mo><mi>t</mi><mo>)</mo><mi>d</mi><mi>t</mi><mo>]</mo><mo>=</mo><mfrac><mn>1</mn><msup><mi>s</mi><mn>2</mn></msup></mfrac><mi>F</mi><mo>(</mo><mi>s</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">L[\int_0^t\int_0^t f(t)dt]=\frac{1}{s^2}F(s)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.344276em;vertical-align:-0.35582em;"></span><span class="mord mathdefault">L</span><span class="mopen">[</span><span class="mop"><span class="mop op-symbol small-op" style="margin-right:0.19445em;position:relative;top:-0.0005599999999999772em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.988456em;"><span style="top:-2.34418em;margin-left:-0.19445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span><span style="top:-3.2579000000000002em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.35582em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop"><span class="mop op-symbol small-op" style="margin-right:0.19445em;position:relative;top:-0.0005599999999999772em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.988456em;"><span style="top:-2.34418em;margin-left:-0.19445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span><span style="top:-3.2579000000000002em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.35582em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mclose">)</span><span class="mord mathdefault">d</span><span class="mord mathdefault">t</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7463142857142857em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault">s</span><span class="mclose">)</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>[</mo><mfrac><mrow><mi>f</mi><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mi>t</mi></mfrac><mo>]</mo><mo>=</mo><msubsup><mo>∫</mo><mi>s</mi><mi mathvariant="normal">∞</mi></msubsup><mi>F</mi><mo>(</mo><mi>s</mi><mo>)</mo><mi>d</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">L[\frac{f(t)}{t}]=\int_s^\infty F(s)ds</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.355em;vertical-align:-0.345em;"></span><span class="mord mathdefault">L</span><span class="mopen">[</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">t</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.10764em;">f</span><span class="mopen mtight">(</span><span class="mord mathdefault mtight">t</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.215112em;vertical-align:-0.35582em;"></span><span class="mop"><span class="mop op-symbol small-op" style="margin-right:0.19445em;position:relative;top:-0.0005599999999999772em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8592920000000001em;"><span style="top:-2.34418em;margin-left:-0.19445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">s</span></span></span><span style="top:-3.2579000000000002em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">∞</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.35582em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault">s</span><span class="mclose">)</span><span class="mord mathdefault">d</span><span class="mord mathdefault">s</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mo>∫</mo><mn>0</mn><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></msubsup><mfrac><mrow><mi>f</mi><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mi>t</mi></mfrac><mi>d</mi><mi>t</mi><mo>=</mo><msubsup><mo>∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mi>F</mi><mo>(</mo><mi>s</mi><mo>)</mo><mi>d</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">\int_0^{+\infty}\frac{f(t)}{t}dt=\int_0^\infty F(s)ds</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.36582em;vertical-align:-0.35582em;"></span><span class="mop"><span class="mop op-symbol small-op" style="margin-right:0.19445em;position:relative;top:-0.0005599999999999772em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9662310000000001em;"><span style="top:-2.34418em;margin-left:-0.19445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span><span style="top:-3.2579000000000002em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">+</span><span class="mord mtight">∞</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.35582em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">t</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.10764em;">f</span><span class="mopen mtight">(</span><span class="mord mathdefault mtight">t</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathdefault">d</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.215112em;vertical-align:-0.35582em;"></span><span class="mop"><span class="mop op-symbol small-op" style="margin-right:0.19445em;position:relative;top:-0.0005599999999999772em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8592920000000001em;"><span style="top:-2.34418em;margin-left:-0.19445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span><span style="top:-3.2579000000000002em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">∞</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.35582em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault">s</span><span class="mclose">)</span><span class="mord mathdefault">d</span><span class="mord mathdefault">s</span></span></span></span><br>
+......</li>
+<li>
+<h2 id="延迟性质">延迟性质</h2>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>[</mo><mi>f</mi><mo>(</mo><mi>t</mi><mo>−</mo><mi>τ</mi><mo>)</mo><mi>u</mi><mo>(</mo><mi>t</mi><mo>−</mo><mi>τ</mi><mo>)</mo><mo>]</mo><mo>=</mo><msup><mi>e</mi><mrow><mi>s</mi><mi>τ</mi></mrow></msup><mi>F</mi><mo>(</mo><mi>s</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">L[f(t-\tau)u(t-\tau)]=e^{s\tau}F(s)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">L</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.1132em;">τ</span><span class="mclose">)</span><span class="mord mathdefault">u</span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.1132em;">τ</span><span class="mclose">)</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">s</span><span class="mord mathdefault mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault">s</span><span class="mclose">)</span></span></span></span></li>
+<li>
+<h2 id="形似性质">形似性质</h2>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>[</mo><mi>f</mi><mo>(</mo><mi>a</mi><mi>t</mi><mo>)</mo><mo>]</mo><mo>=</mo><mfrac><mn>1</mn><mi>a</mi></mfrac><mi>F</mi><mo>(</mo><mfrac><mi>s</mi><mi>a</mi></mfrac><mo>)</mo></mrow><annotation encoding="application/x-tex">L[f(at)]=\frac{1}{a}F(\frac{s}{a})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">L</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mclose">)</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">a</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.695392em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">a</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">s</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span></span></span></span></li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ubuntu 无法输入中文]]></title>
+        <id>https://yuanczx.github.io/post/UKtk77_CE/</id>
+        <link href="https://yuanczx.github.io/post/UKtk77_CE/">
+        </link>
+        <updated>2022-01-07T09:04:38.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="问题">问题</h2>
+<p>在Ubuntu下无法输入中文</p>
+<h2 id="解决方法">解决方法</h2>
+<ol>
+<li><code>sudo apt remove fcitx</code></li>
+<li>在设置中打开<code>语言与支持</code><br>
+<img src="https://yuanczx.github.io/post-images/1641625576621.png" alt="" loading="lazy"><br>
+键盘输入法系统选择IBus</li>
+<li>选择<code>应用到整个系统</code></li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LaTeX 的简单使用]]></title>
+        <id>https://yuanczx.github.io/post/1qesOFK5V/</id>
+        <link href="https://yuanczx.github.io/post/1qesOFK5V/">
+        </link>
+        <updated>2021-12-20T12:48:35.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="下载并安装texlive">下载并安装TexLive</h2>
+<p><a href="https://mirrors.aliyun.com/CTAN/systems/texlive/Images/">阿里云镜像</a><br>
+<img src="https://yuanczx.github.io/post-images/1640161264118.png" alt="" loading="lazy"><br>
+下载后打开镜像<br>
+进入目录执行 <code>./install-tl</code> 安装TexLive 等待安装完成</p>
+<h2 id="配置环境变量">配置环境变量</h2>
+<p><code>vim ~/.bashrc</code><br>
+在文件末尾添加</p>
+<pre><code class="language-js">  export PATH=/usr/local/texlive/2021/bin/x86_64-linux:$PATH
+  export MANPATH=/usr/local/texlive/2021/texmf-dist/doc/man:$MANPATH
+  export INFOPATH=/usr/local/texlive/2021/texmf-dist/doc/info:$INFOPATH
+  ```
+## 使用VsCode编辑Tex
+下载LaTeX Workshop插件
+新建test.tex文件
+内容如下
+```js
+  \documentclass[UTF8]{ctexart}
+  \begin{document}
+      Hello world!
+  \end{document}
+</code></pre>
+<p>点击绿色箭头编译即可看到pdf文件</p>
+<h2 id="示例">示例</h2>
+<p><img src="https://yuanczx.github.io/post-images/1640181773966.png" alt="" loading="lazy"><br>
+输出:<br>
+<img src="https://yuanczx.github.io/post-images/1640181782616.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ubuntu Gnome桌面美化]]></title>
+        <id>https://yuanczx.github.io/post/8iDJwPchF/</id>
+        <link href="https://yuanczx.github.io/post/8iDJwPchF/">
+        </link>
+        <updated>2021-12-19T10:36:01.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="1-安装-tweaks-gnome美化插件">1. 安装 Tweaks (Gnome美化插件)</h2>
+<p><code>sudo apt update&amp;&amp;sudo apt install gnome-tweaks chrome-gnome-shell</code><br>
+<img src="https://yuanczx.github.io/post-images/1639910398091.png" alt="Tweaks界面" loading="lazy"></p>
+<h2 id="2-安装tweaks插件">2. 安装Tweaks插件</h2>
+<ul>
+<li><a href="https://extensions.gnome.org/">下载地址</a></li>
+<li>安装 UserThemes<br>
+<img src="https://yuanczx.github.io/post-images/1639910652867.png" alt="UserThemes" loading="lazy"></li>
+</ul>
+<h2 id="3-选择喜欢的主题并安装">3. 选择喜欢的主题并安装</h2>
+<ul>
+<li><a href="https://www.gnome-look.org">GnomeLook</a></li>
+<li>选择喜欢的主题下载<br>
+<img src="https://yuanczx.github.io/post-images/1639910868196.png" alt="GnomeTheme" loading="lazy"></li>
+<li>安装主题<br>
+将文件解压并将文件夹移动至对应目录如下表
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>目录</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主题</td>
+<td>/usr/share/themes</td>
+</tr>
+<tr>
+<td>图标</td>
+<td>/usr/share/icons</td>
+</tr>
+<tr>
+<td>光标</td>
+<td>/usr/share/icons</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="4-使用主题">4.  使用主题</h2>
+<ul>
+<li>进入 Tweaks 选择外观Tab</li>
+<li>安装后需要切换一次主题才能显示新安装的主题</li>
+<li>最终效果图<br>
+<img src="https://yuanczx.github.io/post-images/1640495867504.png" alt="" loading="lazy"></li>
+</ul>
+<h2 id="5-个人使用插件">5. 个人使用插件</h2>
+<table>
+<thead>
+<tr>
+<th>插件</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://extensions.gnome.org/extension/6/applications-menu/">Applications Menu</a></td>
+<td>在顶栏显示APP列表</td>
+</tr>
+<tr>
+<td><a href="https://extensions.gnome.org/extension/1732/gtk-title-bar/">GTK Title Bar</a></td>
+<td>隐藏标题栏</td>
+</tr>
+<tr>
+<td><a href="https://extensions.gnome.org/extension/545/hide-top-bar/">Hide Top Bar</a></td>
+<td>隐藏顶栏</td>
+</tr>
+<tr>
+<td><a href="https://extensions.gnome.org/extension/1121/ibus-font-setting/">ibus font setting</a></td>
+<td>输入法设置</td>
+</tr>
+<tr>
+<td><a href="https://extensions.gnome.org/extension/19/user-themes/">User Themes</a></td>
+<td>主题</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-推荐主题">6. 推荐主题</h2>
+<p><a href="https://www.gnome-look.org/p/1357889/">Orchis gtk theme</a><br>
+<a href="https://www.gnome-look.org/p/1215613">GoogleDot Blue</a><br>
+<a href="https://www.gnome-look.org/p/1279924/">Tela-icon-theme</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Docker 常用命令及问题解决]]></title>
+        <id>https://yuanczx.github.io/post/xH3QXiski/</id>
+        <link href="https://yuanczx.github.io/post/xH3QXiski/">
+        </link>
+        <updated>2021-12-12T09:02:01.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="常用命令">常用命令</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docker ps</code></td>
+<td>列出正在运行的容器</td>
+</tr>
+<tr>
+<td><code>docker ps -a</code></td>
+<td>列出所有容器</td>
+</tr>
+<tr>
+<td><code>docker run --name [name] -d -v [mPath]:[sPath] [image]</code></td>
+<td>运行容器  -d后台 -v文件挂载 -p 端口映射</td>
+</tr>
+<tr>
+<td><code>docker exec -it [name/id] /bin/bash</code></td>
+<td>进入容器</td>
+</tr>
+<tr>
+<td><code>docker start [name]</code></td>
+<td>启动容器</td>
+</tr>
+<tr>
+<td><code>docker build -t [tag] .</code></td>
+<td>构建镜像 -t TAG</td>
+</tr>
+</tbody>
+</table>
+<h2 id="常见问题及解决方法">常见问题及解决方法</h2>
+<ul>
+<li>
+<p>Docker 出现权限问题（Ubuntu）Got permission denied<br>
+执行命令：<code>sudo chmod a+rw /var/run/docker.sock</code></p>
+</li>
+<li>
+<p>在WSL2下无法通过IP地址访问Docker<br>
+解决方法：配置端口转发 在PowerShell中执行如下命令（请勿换行）</p>
+<pre><code class="language-shell">netsh interface portproxy add v4tov4     \
+  listenport=22 listenaddress=0.0.0.0  \
+  connectport=22 connectaddress=`WSL2 IP Address`
+</code></pre>
+</li>
+<li>
+<p>在Ubuntu中升级Docker<br>
+<code>apt-get -u -y upgrade lxc-docker</code>  安全升级Docker<br>
+<code>apt-get -u -y dist-upgrade lxc-docker</code>  强制升级Docker</p>
+</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Vue3 使用记录]]></title>
+        <id>https://yuanczx.github.io/post/FF0yx0m1r/</id>
+        <link href="https://yuanczx.github.io/post/FF0yx0m1r/">
+        </link>
+        <updated>2021-11-29T07:40:02.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li>
+<h2 id="添加点击事件">添加点击事件：</h2>
+<pre><code class="language-html">&lt;button @click=&quot;click&quot;&gt;Click me&lt;/button&gt;
+</code></pre>
+<pre><code class="language-js">export default{
+    method:{
+        click(){
+            alert('You click the button')
+        }
+    }
+}
+</code></pre>
+</li>
+<li>
+<h2 id="元素attribute-绑定">元素Attribute 绑定</h2>
+<p>动态改变CSS</p>
+<pre><code class="language-html">&lt;div :class=&quot;cls&quot; @click=&quot;click&quot;&gt;Test&lt;/div&gt;
+</code></pre>
+<pre><code class="language-js">export default{
+    data(){
+        return{
+            cls:'ta'
+        }
+    },
+    method:{
+        click(){
+            if(this.cls=='ta')
+            this.cls='tb';
+            else this.cls='ta';
+        }
+    }
+}
+</code></pre>
+<pre><code class="language-css">.ta{
+    font-size:20px;
+}
+.tb{
+    font-size:30px;
+}
+</code></pre>
+</li>
+<li>
+<h2 id="计算属性使用方法">计算属性使用方法</h2>
+<pre><code class="language-html">&lt;span&gt;{{ publishedBooksMessage }}&lt;/span&gt;  
+</code></pre>
+<pre><code class="language-js">export default{
+    data(){
+        return{
+            book:&quot;&quot;
+        }
+    },
+    computed:{
+        publishedBookMessage:{
+            get(){
+                return this.book
+            },
+            set(newValue){
+                this.book = newValue
+            }
+        }
+    }
+}
+</code></pre>
+</li>
+<li>
+<h2 id="侦听器">侦听器</h2>
+<pre><code class="language-html">&lt;input v-model=&quot;test&quot;/&gt;
+</code></pre>
+<pre><code class="language-js">export default{
+    data(){
+        return{
+            test:&quot;&quot;
+        }
+    }
+    watch:{
+        test(newValue, oldValue){
+            alert(newValue);
+        }
+    }
+}
+</code></pre>
+</li>
+<li>
+<h2 id="注意事项">注意事项：</h2>
+<ul>
+<li>使用Vite构建时需要使用在Compoent时需要加上<code>.vue</code>后缀</li>
+<li>在使用<code>public</code>文件夹下的资源时使用绝对路径</li>
+</ul>
+<pre><code class="language-js">export default{
+    data(){
+        return{
+            src: '.public/[name].html'
+        }
+    }
+}
+</code></pre>
+</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Nginx的简单使用]]></title>
+        <id>https://yuanczx.github.io/post/FTdPa0SA/</id>
+        <link href="https://yuanczx.github.io/post/FTdPa0SA/">
+        </link>
+        <updated>2021-11-25T09:27:29.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="配置">配置</h2>
+<ol>
+<li>启动Nginx：<code>nginx</code></li>
+<li>重新加载配置文件<code>nginx -s reload</code></li>
+<li>负载均衡简单配置：<pre><code class="language-js">http{
+     upstream [name]{
+         server ip weight=1;
+         server ip weight=2;
+     }
+
+     server{
+      location / {
+             proxy_pass http://name;
+             # root /usr/share/nginx/html;
+             # index index.html index.htm;
+     }
+     }
+}
+</code></pre>
+</li>
+<li>使用VueRouter配置：<pre><code class="language-js"> location / {
+         root /usr/share/nginx/html;
+         index index.html index.htm;
+         try_files $uri $uri/ @router;
+     }
+ location @router{
+         rewrite ^.*$ /index.html last;
+ }
+</code></pre>
+</li>
+</ol>
+<h2 id="问题">问题</h2>
+<ul>
+<li>网页中文乱码<pre><code class="language-js">server {
+    charset utf-8;
+}
+</code></pre>
+</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Gradle构建Spring Boot+Kotlin]]></title>
+        <id>https://yuanczx.github.io/post/9BwljLSLp/</id>
+        <link href="https://yuanczx.github.io/post/9BwljLSLp/">
+        </link>
+        <updated>2021-11-22T03:05:17.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="使用gradle构建kotlinspring-boot项目遇到的一些问题">使用Gradle构建Kotlin+Spring Boot项目遇到的一些问题</h2>
+<ol>
+<li>
+<p>在<code>@Application</code>注解下使用open class而不是class</p>
+</li>
+<li>
+<p>要使用data class作为entity需要在启动类加上注解<br>
+<code>@EnableConfigurationProperties([ClassName]::class)</code><br>
+并且在entity上加注解：<code>@ConstructorBinding</code></p>
+</li>
+<li>
+<p>无法打包生成jar包。需要在build.gradle.kts文件中添加以下内容：</p>
+</li>
+</ol>
+<pre><code class="language-js">tasks.jar {
+    manifest {
+        attributes(mapOf(&quot;Main-Class&quot; to &quot;TestApplicationKt&quot;))
+    }
+}
+</code></pre>
+]]></content>
+    </entry>
+</feed>

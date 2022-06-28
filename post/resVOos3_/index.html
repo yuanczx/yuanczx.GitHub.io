@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>STM32 HAL库 函数 | yuanczx</title>
+<meta name="description" content="&lt;span id=&#34;jinrishici-sentence&#34; onclick=&#34;toast()&#34;&gt;温故知新
+&lt;script&gt;
+function toast(){alert(&#34;温故知新&#34;);}&lt;/script&gt;&lt;/span&gt;&lt;script src=&#34;https://sdk.jinrishici.com/v2/browser/jinrishici.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yuanczx.github.io/favicon.ico?v=1656417482990">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://yuanczx.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://yuanczx.github.io">
+        <img class="avatar" src="https://yuanczx.github.io/images/avatar.png?v=1656417482990" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://yuanczx.github.io">
+        <h1 class="site-title">yuanczx</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+        
+          <a href="/post/links" class="menu purple-link">
+            友链
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">STM32 HAL库 函数</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-07-14</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://yuanczx.github.io/tag/stm32/">
+                    STM32
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://yuanczx.github.io/tag/BN6_0Cg6p/">
+                    单片机
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <h3 id="这是一个关于stm32-hal库一些函数的使用方法和记录">这是一个关于STM32 HAL库一些函数的使用方法和记录</h3>
+<!-- more -->
+<ul>
+<li>
+<p>GPIO相关</p>
+<ul>
+<li>反转电平：<code>HAL_GPIO_TogglePin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin)</code></li>
+<li>读取电平：<code>HAL_GPIO_ReadPin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin)</code></li>
+<li>设置电平：<code>HAL_GPIO_WritePin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState)</code></li>
+<li>中断回调函数：<code>void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)</code></li>
+<li>SysTick函数：<code>void SysTick_Handler(void)</code> 每间隔1ms调用一次</li>
+</ul>
+</li>
+<li>
+<p>串口通信</p>
+<ul>
+<li>开启串口通信Rx中断(接收)：<code>HAL_UART_Receive_IT(huart, receive, 4);</code></li>
+<li>串口通信Rx回调函数：<code>void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)</code></li>
+<li>串口通信发送数据:<code>HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout)</code></li>
+<li>串口通信发送数据(DMA)：<code>HAL_UART_Transmit_DMA(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size)</code></li>
+</ul>
+</li>
+<li>
+<p>定时器</p>
+<ul>
+<li>
+<p>PWM使能：<code>HAL_TIM_PWM_Start(TIM_HandleTypeDef *htim, uint32_t Channel)</code></p>
+</li>
+<li>
+<p>PWM比较：<code>__HAL_TIM_SetCompare(TIM_HandleTypeDef *htim, uint32_t  Channel, unit_16 pwmVal)</code></p>
+</li>
+<li>
+<p>定时器中断使能：<code>HAL_TIM_Base_Start_IT(TIM_HandleTypeDef *htim)</code></p>
+</li>
+<li>
+<p>定时器中断回调函数：<code>void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)</code></p>
+</li>
+<li>
+<p>I2C</p>
+<ul>
+<li>读取数据：<code>HAL_I2C_Mem_Read_DMA(&amp;hi2c1,0xA0,0x00,8,receive,sizeof(text))</code></li>
+<li>发送数据：  <code>HAL_I2C_Mem_Write_DMA(&amp;hi2c1,0xA1,0x00,8,text, sizeof(text))</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>ADC</p>
+<ul>
+<li>开启ADC：<code>HAL_ADC_Start(&amp;hadc1)</code></li>
+<li>等待ADC: <code>HAL_ADC_PollForConversion(&amp;hadc1,50)</code></li>
+<li>ADC校准：<code>HAL_ADCEx_Calibration_Start(&amp;ADC1_Handler)</code></li>
+<li>获取ADC值：<code>HAL_ADC_GetValue(&amp;hadc1)</code></li>
+</ul>
+</li>
+<li>
+<p>SPI</p>
+<ul>
+<li>发送数据：<code>HAL_SPI_Transmit(&amp;hspi1,data,size,timeout);</code></li>
+<li>接收数据：<code>HAL_SPI_Receive(&amp;hspi1,data, size,timeout);</code></li>
+<li>接发数据：<code>HAL_SPI_TransmitReceive(&amp;hspi1,TxData,RxData,size ,timeout);</code></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://yuanczx.github.io/post/cIebf0Am3/">
+              <h3 class="post-title">
+                下一篇：《考试周破防》
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan"><span id="jinrishici-sentence" onclick="toast()">温故知新
+<script>
+function toast(){alert("温故知新");}</script></span><script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script></div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/yuanczx" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a class="powered" href="https://github.com/getgridea/gridea">Gridea</a> | <a class="rss" href="https://yuanczx.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

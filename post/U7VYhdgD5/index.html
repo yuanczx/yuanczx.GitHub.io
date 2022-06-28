@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>Vim常用指令 | yuanczx</title>
+<meta name="description" content="&lt;span id=&#34;jinrishici-sentence&#34; onclick=&#34;toast()&#34;&gt;温故知新
+&lt;script&gt;
+function toast(){alert(&#34;温故知新&#34;);}&lt;/script&gt;&lt;/span&gt;&lt;script src=&#34;https://sdk.jinrishici.com/v2/browser/jinrishici.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yuanczx.github.io/favicon.ico?v=1656417482990">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://yuanczx.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://yuanczx.github.io">
+        <img class="avatar" src="https://yuanczx.github.io/images/avatar.png?v=1656417482990" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://yuanczx.github.io">
+        <h1 class="site-title">yuanczx</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+        
+          <a href="/post/links" class="menu purple-link">
+            友链
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+            <div class="feature-container" style="background-image: url('https://yuanczx.github.io/post-images/U7VYhdgD5.svg')">
+            </div>
+          
+          <h2 class="post-title">Vim常用指令</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-10-10</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://yuanczx.github.io/tag/linux/">
+                    Linux
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://yuanczx.github.io/tag/vim/">
+                    Vim
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <p><strong>注意：区分大小写 表格中的 [ ]   ( )请忽略</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">[n]gg</td>
+<td style="text-align:left">跳转到第n行</td>
+</tr>
+<tr>
+<td style="text-align:left">H</td>
+<td style="text-align:left">跳转到当前屏幕开始处</td>
+</tr>
+<tr>
+<td style="text-align:left">M</td>
+<td style="text-align:left">跳转到当前屏幕中间处</td>
+</tr>
+<tr>
+<td style="text-align:left">L</td>
+<td style="text-align:left">跳转到当前屏幕底处</td>
+</tr>
+<tr>
+<td style="text-align:left">:wq</td>
+<td style="text-align:left">保存并退出</td>
+</tr>
+<tr>
+<td style="text-align:left">yiw/yaw</td>
+<td style="text-align:left">复制一个单词</td>
+</tr>
+<tr>
+<td style="text-align:left">ciw/caw</td>
+<td style="text-align:left">改变当前单词</td>
+</tr>
+<tr>
+<td style="text-align:left">diw/daw</td>
+<td style="text-align:left">删除当前词</td>
+</tr>
+<tr>
+<td style="text-align:left">[n]dw</td>
+<td style="text-align:left">删除[n]个字符</td>
+</tr>
+<tr>
+<td style="text-align:left">i</td>
+<td style="text-align:left">在光标前插入</td>
+</tr>
+<tr>
+<td style="text-align:left">I</td>
+<td style="text-align:left">在光标所在行首进入Insert模式</td>
+</tr>
+<tr>
+<td style="text-align:left">a</td>
+<td style="text-align:left">在光标后进入Insert模式</td>
+</tr>
+<tr>
+<td style="text-align:left">A</td>
+<td style="text-align:left">在光标所在行末进入Insert模式</td>
+</tr>
+<tr>
+<td style="text-align:left">o</td>
+<td style="text-align:left">在光标当前行下另起一行并进入Insert模式</td>
+</tr>
+<tr>
+<td style="text-align:left">O</td>
+<td style="text-align:left">在光标当前行上另起一行并进入Insert模式</td>
+</tr>
+<tr>
+<td style="text-align:left">/(text)</td>
+<td style="text-align:left">查找所有(text)，n下一个，N上一个</td>
+</tr>
+<tr>
+<td style="text-align:left">w</td>
+<td style="text-align:left">跳转到下一个单词首</td>
+</tr>
+<tr>
+<td style="text-align:left">b</td>
+<td style="text-align:left">跳转到上一个单词首</td>
+</tr>
+<tr>
+<td style="text-align:left">e</td>
+<td style="text-align:left">跳转到下一个单词末</td>
+</tr>
+<tr>
+<td style="text-align:left">f(s)</td>
+<td style="text-align:left">跳转到下一个(s)处</td>
+</tr>
+<tr>
+<td style="text-align:left">F(s)</td>
+<td style="text-align:left">跳转到上一个(s)处</td>
+</tr>
+<tr>
+<td style="text-align:left">t(s)</td>
+<td style="text-align:left">把光标移到同一行的下一个(s)字符前</td>
+</tr>
+<tr>
+<td style="text-align:left">T(s)</td>
+<td style="text-align:left">把光标移到同一行的上一个(s)字符后</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl+f</td>
+<td style="text-align:left">下翻一屏</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl+b</td>
+<td style="text-align:left">上翻一屏</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl+d</td>
+<td style="text-align:left">下翻半屏</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl+u</td>
+<td style="text-align:left">上翻半屏</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl+e</td>
+<td style="text-align:left">向下滚动一行</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl+y</td>
+<td style="text-align:left">向上滚动一行</td>
+</tr>
+<tr>
+<td style="text-align:left">[n]%</td>
+<td style="text-align:left">到文件n%的位置</td>
+</tr>
+<tr>
+<td style="text-align:left">zz</td>
+<td style="text-align:left">将当前行移动到屏幕中央</td>
+</tr>
+<tr>
+<td style="text-align:left">zt</td>
+<td style="text-align:left">将当前行移动到屏幕顶端</td>
+</tr>
+<tr>
+<td style="text-align:left">zb</td>
+<td style="text-align:left">将当前行移动到屏幕底端</td>
+</tr>
+<tr>
+<td style="text-align:left">:!(command)</td>
+<td style="text-align:left">执行命令</td>
+</tr>
+</tbody>
+</table>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://yuanczx.github.io/post/eERGdI2mu/">
+              <h3 class="post-title">
+                下一篇：Looker：一个只能看新闻的APP
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan"><span id="jinrishici-sentence" onclick="toast()">温故知新
+<script>
+function toast(){alert("温故知新");}</script></span><script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script></div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/yuanczx" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a class="powered" href="https://github.com/getgridea/gridea">Gridea</a> | <a class="rss" href="https://yuanczx.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

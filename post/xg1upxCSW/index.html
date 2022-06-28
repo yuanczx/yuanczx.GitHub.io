@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>使用GPG为Commit签名 GitHub Verified标签 | yuanczx</title>
+<meta name="description" content="&lt;span id=&#34;jinrishici-sentence&#34; onclick=&#34;toast()&#34;&gt;温故知新
+&lt;script&gt;
+function toast(){alert(&#34;温故知新&#34;);}&lt;/script&gt;&lt;/span&gt;&lt;script src=&#34;https://sdk.jinrishici.com/v2/browser/jinrishici.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yuanczx.github.io/favicon.ico?v=1656417482990">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://yuanczx.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://yuanczx.github.io">
+        <img class="avatar" src="https://yuanczx.github.io/images/avatar.png?v=1656417482990" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://yuanczx.github.io">
+        <h1 class="site-title">yuanczx</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+        
+          <a href="/post/links" class="menu purple-link">
+            友链
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">使用GPG为Commit签名 GitHub Verified标签</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-08-12</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://yuanczx.github.io/tag/github/">
+                    GItHub
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://yuanczx.github.io/tag/git/">
+                    Git
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <ul>
+<li>安装Git 在Windows中打开Gitbash,Linux中打开Shell</li>
+<li>输入<code>gpg --full-generate-key</code>按照提示输入</li>
+</ul>
+<pre style="background:#fffaeb;padding:10px;border-radius:10px;overflow:auto" >gpg (GnuPG) 2.2.19; Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+请选择您要使用的密钥类型：
+   (1) RSA 和 RSA （默认）
+   (2) DSA 和 Elgamal
+   (3) DSA（仅用于签名）
+   (4) RSA（仅用于签名）
+  (14) Existing key from card
+您的选择是？ 1
+RSA 密钥的长度应在 1024 位与 4096 位之间。
+您想要使用的密钥长度？(3072) 4096
+请求的密钥长度是 4096 位
+请设定这个密钥的有效期限。
+         0 = 密钥永不过期
+      &lt;n&gt;  = 密钥在 n 天后过期
+      &lt;n&gt;w = 密钥在 n 周后过期
+      &lt;n&gt;m = 密钥在 n 月后过期
+      &lt;n&gt;y = 密钥在 n 年后过期
+密钥的有效期限是？(0) 0
+密钥永远不会过期
+这些内容正确吗？ (y/N) Y
+
+GnuPG 需要构建用户标识以辨认您的密钥。
+
+真实姓名： yuanczx
+电子邮件地址： yuanczx@foxmail.com
+注释： GitHub
+您选定了此用户标识：
+    “yuanczx (GitHub) &lt;yuanczx@foxmail.com&gt;”
+
+更改姓名（N）、注释（C）、电子邮件地址（E）或确定（O）/退出（Q）？ O
+</pre>
+<p>最后输入O即可生成GPG密钥如下图</p>
+  <pre style="background:#fffaeb;padding:10px;border-radius:10px;overflow:auto">公钥和私钥已经生成并被签名。
+
+pub   rsa4096 2021-12-22 [SC]
+      41058105E2045471D6F781C9F8130DCA3246FC4A
+uid                      yuanczx (GitHub) &lt;yuanczx@foxmail.com&gt;
+sub   rsa4096 2021-12-22 [E]
+</pre>
+<p>其中<code>41058105E2045471D6F781C9F8130DCA3246FC4A</code>为密钥ID</p>
+<ul>
+<li>导出公钥<br>
+<code>gpg --armor --export [key_id]</code></li>
+</ul>
+<pre style="background:#fffaeb;padding:10px;border-radius:10px;overflow:auto"><font color="#859900"><b>yuanczx@yuanczx</b></font>:<font color="#268BD2"><b>~</b></font>$ gpg --armor --export 41058105E2045471D6F781C9F8130DCA3246FC4A
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+********************************************************************
+-----END PGP PUBLIC KEY BLOCK-----
+</pre>
+<p>复制从<code>-----BEGIN PGP PUBLIC KEY BLOCK-----</code>到-<code>----END PGP PUBLIC KEY BLOCK-----</code>的所有内容包括BLOCK</p>
+<ul>
+<li>
+<p>打开GitHub设置选择SSH and GPG keys 点击 New GPG key<br>
+<img src="https://yuanczx.github.io/post-images/1640136720448.png" alt="" loading="lazy"><br>
+将复制的内容粘贴并点击ADD GPG key<br>
+<img src="https://yuanczx.github.io/post-images/1640136794916.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>设置Git签名密钥<br>
+<code>git config --global user.signingkey [keyi_d]</code><br>
+然后，在每次commit的时候，加上-S参数，表示这次提交需要用GPG密钥进行签名：<br>
+<code>git commit -S -m &quot;...&quot;</code><br>
+也可以设置自动签名<br>
+<code>git config --global commit.gpgsign true</code></p>
+<h3 id="至此提交commit便会出现verified标签">至此提交Commit便会出现Verified标签</h3>
+</li>
+<li>
+<p>导出GPG公私钥<br>
+<code>gpg --output mygpgkey_pub.gpg --armor --export [key_id]</code>导出公钥<br>
+<code>gpg --output mygpgkey_sec.gpg --armor --export-secret-key</code>导出私钥</p>
+</li>
+<li>
+<p>导入GPG密钥<br>
+<code>gpg --import ~/mygpgkey_pub.</code>gpg<code>导入公钥 </code>gpg --allow-secret-key-import --import ~/mygpgkey_sec.gpg`导入私钥</p>
+</li>
+<li>
+<p>参考:<br>
+<a href="https://zhuanlan.zhihu.com/p/76861431">知乎：在Github上使用GPG的全过程</a><br>
+<a href="https://blog.csdn.net/x728999452/article/details/50759249">CSDN：Windows下GPG的使用</a></p>
+</li>
+</ul>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://yuanczx.github.io/post/ttzv1pQ5m/">
+              <h3 class="post-title">
+                下一篇：Qt 无法在QtDesigner中向QMainWindow放置控件的问题
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan"><span id="jinrishici-sentence" onclick="toast()">温故知新
+<script>
+function toast(){alert("温故知新");}</script></span><script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script></div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/yuanczx" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a class="powered" href="https://github.com/getgridea/gridea">Gridea</a> | <a class="rss" href="https://yuanczx.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

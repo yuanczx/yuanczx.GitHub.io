@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>Qt 无法在QtDesigner中向QMainWindow放置控件的问题 | yuanczx</title>
+<meta name="description" content="&lt;span id=&#34;jinrishici-sentence&#34; onclick=&#34;toast()&#34;&gt;温故知新
+&lt;script&gt;
+function toast(){alert(&#34;温故知新&#34;);}&lt;/script&gt;&lt;/span&gt;&lt;script src=&#34;https://sdk.jinrishici.com/v2/browser/jinrishici.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yuanczx.github.io/favicon.ico?v=1656417482990">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://yuanczx.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://yuanczx.github.io">
+        <img class="avatar" src="https://yuanczx.github.io/images/avatar.png?v=1656417482990" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://yuanczx.github.io">
+        <h1 class="site-title">yuanczx</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+        
+          <a href="/post/links" class="menu purple-link">
+            友链
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">Qt 无法在QtDesigner中向QMainWindow放置控件的问题</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-08-10</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://yuanczx.github.io/tag/qt/">
+                    Qt
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://yuanczx.github.io/tag/clion/">
+                    Clion
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <p>问题：用<strong>Clion</strong>开发Qt时新建<strong>Qt Ui Class</strong>中产生的ui文件用<strong>QtDesigner</strong>打开后<br>
+无法在<strong>QtDesigner</strong>中将控件拖入<strong>QMainWindow</strong>类窗口中。<br>
+原因：生成的<strong>ui</strong>文件中不包含有<strong>QWidget</strong>。<br>
+方法：在<strong>ui</strong>文件中加入以下</p>
+<!-- more -->
+<pre><code class="language-xml">&lt;widget class=&quot;QWidget&quot; name=&quot;centralwidget&quot;&gt;
+    &lt;property name=&quot;sizePolicy&quot;&gt;
+        &lt;sizepolicy hsizetype=&quot;Preferred&quot; vsizetype=&quot;Preferred&quot;&gt;
+             &lt;horstretch&gt;0&lt;/horstretch&gt;
+            &lt;verstretch&gt;0&lt;/verstretch&gt;
+        &lt;/sizepolicy&gt;
+    &lt;/property&gt;
+&lt;/widget&gt;
+</code></pre>
+<p>完整<strong>ui</strong>文件如下：</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ui version=&quot;4.0&quot;&gt;
+    &lt;author/&gt;
+    &lt;comment/&gt;
+    &lt;exportmacro/&gt;
+    &lt;class&gt;MainWindow&lt;/class&gt;
+    &lt;widget class=&quot;QMainWindow&quot; name=&quot;MainWindow&quot;&gt;
+        &lt;property name=&quot;geometry&quot;&gt;
+            &lt;rect&gt;
+                &lt;x&gt;0&lt;/x&gt;
+                &lt;y&gt;0&lt;/y&gt;
+                &lt;width&gt;400&lt;/width&gt;
+                &lt;height&gt;300&lt;/height&gt;
+            &lt;/rect&gt;
+        &lt;/property&gt;
+        &lt;property name=&quot;windowTitle&quot;&gt;
+            &lt;string&gt;MainWindow&lt;/string&gt;
+        &lt;/property&gt;
+    
+    &lt;widget class=&quot;QWidget&quot; name=&quot;centralwidget&quot;&gt;
+        &lt;property name=&quot;sizePolicy&quot;&gt;
+            &lt;sizepolicy hsizetype=&quot;Preferred&quot; vsizetype=&quot;Preferred&quot;&gt;
+                &lt;horstretch&gt;0&lt;/horstretch&gt;
+                &lt;verstretch&gt;0&lt;/verstretch&gt;
+            &lt;/sizepolicy&gt;
+        &lt;/property&gt;
+    &lt;/widget&gt;
+
+    &lt;/widget&gt;
+    &lt;pixmapfunction/&gt;
+    &lt;connections/&gt;
+&lt;/ui&gt;
+</code></pre>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://yuanczx.github.io/post/HUmB9Vsx3/">
+              <h3 class="post-title">
+                下一篇：C++ 读写文件
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan"><span id="jinrishici-sentence" onclick="toast()">温故知新
+<script>
+function toast(){alert("温故知新");}</script></span><script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script></div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/yuanczx" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a class="powered" href="https://github.com/getgridea/gridea">Gridea</a> | <a class="rss" href="https://yuanczx.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
